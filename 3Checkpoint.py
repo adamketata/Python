@@ -4,11 +4,12 @@ result = Mylist[0] * Mylist[1] * Mylist[2]
 print(result)
 #Q2
 Mylist2= [(3,2),(4,5),(3,1),(8,3),(5,4)]
-list2 = []
-for x in Mylist2:
-    x = x[1]
-    print(x)
-    
+for x in range(0, (len(Mylist2)-1)):
+    minimum = Mylist2[x][1]
+    if Mylist2[x][1] > Mylist2[x+1][1]:
+        minimum = Mylist2[x+1][1]
+        Mylist2[0] = Mylist2[x + 1]
+
 
 #Q3
 mydict1 = { "a":100 , "b":200, "c":300}
